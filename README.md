@@ -49,6 +49,7 @@ export default defineConfig({
       },
     ]
   },
+  //Add build if you going to use a Git-based (Github or CodeCommit) deployement
   build: {
     outDir: "build",
   }
