@@ -3,7 +3,7 @@ React using Vite
 
 For Vite get started documentation please visit https://vitejs.dev/guide/
 
-## Setting up React-Typescript on Vite:
+## Setting up React-Typescript + Vite for Amplify:
 
 1. Install Vite
 ```bash
