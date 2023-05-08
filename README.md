@@ -156,7 +156,7 @@ export default defineConfig({
   }
 })
 ```
-Then go to your aws console > Amplify > your app > Build Settings > amplify.yml and check if all the settings are they are correct. Make sure that the `build commands` is `npm run build` and `artifacts baseDirectory` is set to `build`
+Then go to your aws console > Amplify > your app > Build Settings > amplify.yml and check if all the settings are correct. Make sure that the `build commands` is `npm run build` and `artifacts baseDirectory` is set to `build`
 ![Alt text](src/assets/image/amplify_yml.png)
 
 ```diff
