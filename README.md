@@ -51,7 +51,9 @@ export default defineConfig({
   }
 })
 ```
-* If you plan to host your App using a Git-based (CI/CD pipeline) to Github it is important to add `build output` inside `defineConfig({})`. 
+```diff
+- If you plan to host your App using a Git-based (CI/CD pipeline) to Github it is important to add `build output` inside `defineConfig({})`. 
+```
 ```javascript
 export default defineConfig({
   plugins: [react()],
