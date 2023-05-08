@@ -85,3 +85,7 @@ https://docs.amplify.aws/cli/start/install/#configure-the-amplify-cli
 to complete the user creation in the AWS console
 https://console.aws.amazon.com/iamv2/home#/users/create
 ```
+Navigate to the IAM User (https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users/create) creation page if it's not already open.
+
+Enter a User name and select Next. You can name the user anything but we'll call it "amplify-dev".
+![Alt text](src/assets/image/iam_1.png)
