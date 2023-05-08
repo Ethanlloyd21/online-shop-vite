@@ -50,8 +50,27 @@ export default defineConfig({
     ]
   }
 })
-
 ```
+* If you are hosting your App using a CI/CD pipeline to Github it is important to add `build output` inside `defineConfig({})`. 
+```javascript
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+      alias: [
+      {
+        find: './runtimeConfig',
+        replacement: './runtimeConfig.browser',
+      },
+    ]
+  },
+  build: {
+    outDir: "build",
+  }
+})
+```
+Also check your amplify.yml settings if they are correct.
+![Alt text](src/assets/image/amplify_yml.png)
+
 
 5. Update the `tsconfig.json` file and add `skipLibCheck: true` under `compilerOptions`.
 ```bash
