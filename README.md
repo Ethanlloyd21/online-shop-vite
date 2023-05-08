@@ -37,21 +37,7 @@ npm run dev
 </script>
 ```
 
-4. Update the `vite.config.ts` and add a resolve alias inside the `defineConfig({})` as seen below.
-```javascript
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-      alias: [
-      {
-        find: './runtimeConfig',
-        replacement: './runtimeConfig.browser',
-      },
-    ]
-  }
-})
-```
-* If you plan to host your App using a Git-based (CI/CD pipeline) to Github or CodeCommit it is important to add `build output` inside `defineConfig({})`. 
+4. Update the `vite.config.ts` and add a resolve alias inside the `defineConfig({})` as seen below. You need to add the `build output` so Amplify would know where to get the build target of your application.
 ```javascript
 export default defineConfig({
   plugins: [react()],
@@ -67,6 +53,12 @@ export default defineConfig({
     outDir: "build",
   }
 })
+```
+* if build is not included inside `defineConfig({})` the application will only work on Amplify manual deployment. In order for the Git-based (CI/CD pipeline) deployment to work, `build output` must be present. 
+```bash
+ build: {
+    outDir: "build",
+  }
 ```
 
 5. Update the `tsconfig.json` file and add `skipLibCheck: true` under `compilerOptions`.
@@ -139,7 +131,7 @@ For information on how to set up Amplify please visit https://docs.amplify.aws/s
 
 # Let me repeat my self
 
-* ALTERNATIVE: If you are hosting your App using a Git-based (CI/CD pipeline) to Github or CodeCommit it is important to add `build output` inside `defineConfig({})` of your `vite.config.ts`. 
+* if `build` is not included inside `defineConfig({})` of your `vite.config.ts` the application will only work on Amplify manual deployment. In order for the Git-based (CI/CD pipeline) deployment to work, `build` output must be present. 
 ```javascript
 export default defineConfig({
   plugins: [react()],
@@ -156,7 +148,7 @@ export default defineConfig({
   }
 })
 ```
-Then go to your aws console > Amplify > your app > Build Settings > amplify.yml and check if all the settings are correct. Make sure that the `build commands` is `npm run build` and `artifacts baseDirectory` is set to `build`
+Go to your aws console > Amplify > your app > Build Settings > amplify.yml and check if all the settings are correct. Make sure that the `build commands` is `npm run build` and `artifacts baseDirectory` is set to `build`
 ![Alt text](src/assets/image/amplify_yml.png)
 
 ```diff
