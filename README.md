@@ -26,7 +26,7 @@ npm install
 npm run dev
 ```
 
-3. Modify the index.html by adding the following script before the closing body tag </body>
+3. Modify the index.html by adding the following script before the closing body tag `</body>`
 ```html
 <script>
     window.global = window;
