@@ -113,7 +113,7 @@ This is very important because
 ```bash
 | Start Command: npm run-script start
 ```
-will only work for `create-react-app`. Since we are using `Vite`, we need to modify the start and build command for Amplify to mirror our package.json. 
+will not work. Since we are using `Vite`, we need to modify the start and build command for Amplify to mirror our package.json. 
 ```bash
 "scripts": {
     "dev": "vite",
@@ -122,6 +122,40 @@ will only work for `create-react-app`. Since we are using `Vite`, we need to mod
     "preview": "vite preview"
   },
 ```
+You should have something like this
+```bash
+| Name:  reactamplified
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: react
+| Source Directory Path: src
+| Distribution Directory Path: build
+| Build Command: npm run build
+| Start Command: npm run dev
+```
 
 For information on how to set up Amplify please visit https://docs.amplify.aws/start/q/integration/react/
+
+## Let me repeat my self
+
+* If you are hosting your App using a CI/CD pipeline to Github it is important to add `build output` inside `defineConfig({})`. 
+```javascript
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+      alias: [
+      {
+        find: './runtimeConfig',
+        replacement: './runtimeConfig.browser',
+      },
+    ]
+  },
+  build: {
+    outDir: "build",
+  }
+})
+```
+Also check your amplify.yml settings if they are correct.
+![Alt text](src/assets/image/amplify_yml.png)
 
