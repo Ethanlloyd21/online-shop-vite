@@ -139,7 +139,7 @@ For information on how to set up Amplify please visit https://docs.amplify.aws/s
 
 # Let me repeat my self
 
-* ALTERNATIVE: If you are hosting your App using a Git-based (CI/CD pipeline) to Github or CodeCommit it is important to add `build output` inside `defineConfig({})`. 
+* ALTERNATIVE: If you are hosting your App using a Git-based (CI/CD pipeline) to Github or CodeCommit it is important to add `build output` inside `defineConfig({})` of your `vite.config.ts`. 
 ```javascript
 export default defineConfig({
   plugins: [react()],
