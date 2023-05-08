@@ -82,6 +82,7 @@ The following configuration will be applied:
 
 ```
 Amplify will ask you to prompt your response manually. Once you get to the `Build Command` question type
+
 ```bash
 npm run build
 ```
@@ -91,7 +92,6 @@ npm run dev
 ```
 This is very important because 
 ```bash
-| Build Command: npm run-script build
 | Start Command: npm run-script start
 ```
 will only work for `create-react-app`. Since we are using `Vite`, we need to modify the start and build command for Amplify to mirror our package.json. 
