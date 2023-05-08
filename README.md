@@ -77,12 +77,7 @@ export default defineConfig({
 ...
 ```
 
-
-```diff
-- # IMPORTANT!!! 
-```
-
-
+# IMPORTANT!!! 
 
 When initializing your backend on Amplify `amplify init` (You can follow the steps here: https://docs.amplify.aws/start/getting-started/setup/q/integration/react/) make sure you select `No` when asked `Initialize the project with the above configuration?`
 ```bash
