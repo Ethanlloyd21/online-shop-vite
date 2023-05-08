@@ -51,7 +51,7 @@ export default defineConfig({
   }
 })
 ```
-* If you plan to host your App using a Git-based (CI/CD pipeline) to Github it is important to add `build output` inside `defineConfig({})`. 
+* If you plan to host your App using a Git-based (CI/CD pipeline) to Github or CodeCommit it is important to add `build output` inside `defineConfig({})`. 
 ```javascript
 export default defineConfig({
   plugins: [react()],
@@ -98,12 +98,12 @@ The following configuration will be applied:
 ? Initialize the project with the above configuration? No
 
 ```
-Amplify will ask you to prompt your response manually. Once you get to the `Build Command` question type
+Amplify will ask you to prompt your response manually. Once you get to the `Build Command` question, type
 
 ```bash
 npm run build
 ```
-and for the `Start Command` type
+and for the `Start Command`, type
 ```bash
 npm run dev
 ```
@@ -111,7 +111,7 @@ This is very important because
 ```bash
 | Start Command: npm run-script start
 ```
-will not work. Since we are using `Vite`, we need to modify the start and build command for Amplify to mirror our package.json. 
+will not work. Since you are using `Vite`, you need to modify the start and build command for Amplify to mirror your package.json. Check your package.json and you will see that `npm run dev` will start your application not `npm run start`
 ```bash
 "scripts": {
     "dev": "vite",
@@ -120,7 +120,7 @@ will not work. Since we are using `Vite`, we need to modify the start and build 
     "preview": "vite preview"
   },
 ```
-You should have something like this
+Finally you should have something like this:
 ```bash
 | Name:  reactamplified
 | Environment: dev
@@ -135,9 +135,11 @@ You should have something like this
 
 For information on how to set up Amplify please visit https://docs.amplify.aws/start/q/integration/react/
 
-## Let me repeat my self
 
-* ALTERNATIVE: If you are hosting your App using a CI/CD pipeline to Github it is important to add `build output` inside `defineConfig({})`. 
+
+# Let me repeat my self
+
+* ALTERNATIVE: If you are hosting your App using a Git-based (CI/CD pipeline) to Github or CodeCommit it is important to add `build output` inside `defineConfig({})`. 
 ```javascript
 export default defineConfig({
   plugins: [react()],
