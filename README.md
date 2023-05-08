@@ -51,7 +51,7 @@ export default defineConfig({
   }
 })
 ```
-* If you are hosting your App using a CI/CD pipeline to Github it is important to add `build output` inside `defineConfig({})`. 
+* If you plan to host your App using a Git-based (CI/CD pipeline) to Github it is important to add `build output` inside `defineConfig({})`. 
 ```javascript
 export default defineConfig({
   plugins: [react()],
@@ -68,9 +68,6 @@ export default defineConfig({
   }
 })
 ```
-Also check your amplify.yml settings if they are correct.
-![Alt text](src/assets/image/amplify_yml.png)
-
 
 5. Update the `tsconfig.json` file and add `skipLibCheck: true` under `compilerOptions`.
 ```bash
@@ -79,7 +76,7 @@ Also check your amplify.yml settings if they are correct.
     }
 ...
 ```
-## IMPORTANT!!! 
+# - IMPORTANT!!! 
 
 When initializing your backend on Amplify `amplify init` (You can follow the steps here: https://docs.amplify.aws/start/getting-started/setup/q/integration/react/) make sure you select `No` when asked `Initialize the project with the above configuration?`
 ```bash
@@ -139,7 +136,7 @@ For information on how to set up Amplify please visit https://docs.amplify.aws/s
 
 ## Let me repeat my self
 
-* If you are hosting your App using a CI/CD pipeline to Github it is important to add `build output` inside `defineConfig({})`. 
+* ALTERNATIVE: If you are hosting your App using a CI/CD pipeline to Github it is important to add `build output` inside `defineConfig({})`. 
 ```javascript
 export default defineConfig({
   plugins: [react()],
@@ -156,6 +153,6 @@ export default defineConfig({
   }
 })
 ```
-Also check your amplify.yml settings if they are correct.
+Then go to your aws console > Amplify > your app > Build Settings > amplify.yml settings if they are correct.
 ![Alt text](src/assets/image/amplify_yml.png)
 
