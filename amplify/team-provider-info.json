@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-viteonlineshop-dev-73911-authRole",
+      "UnauthRoleArn": "arn:aws:iam::419092779688:role/amplify-viteonlineshop-dev-73911-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::419092779688:role/amplify-viteonlineshop-dev-73911-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-viteonlineshop-dev-73911-deployment",
+      "UnauthRoleName": "amplify-viteonlineshop-dev-73911-unauthRole",
+      "StackName": "amplify-viteonlineshop-dev-73911",
+      "StackId": "arn:aws:cloudformation:us-east-1:419092779688:stack/amplify-viteonlineshop-dev-73911/19ae9e40-edae-11ed-9c80-0a8d1280930d",
+      "AmplifyAppId": "d1h5ib08mwcpq"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1h5ib08mwcpq",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
