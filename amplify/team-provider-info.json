@@ -10,14 +10,6 @@
       "StackName": "amplify-viteonlineshop-dev-73911",
       "StackId": "arn:aws:cloudformation:us-east-1:419092779688:stack/amplify-viteonlineshop-dev-73911/19ae9e40-edae-11ed-9c80-0a8d1280930d",
       "AmplifyAppId": "d1h5ib08mwcpq"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d1h5ib08mwcpq",
-          "type": "manual"
-        }
-      }
     }
   }
 }
