@@ -60,32 +60,49 @@ export default defineConfig({
     }
 ...
 ```
+## IMPORTANT!!! 
 
-## Setting up Amplify:
-
-For more information on how to set up your app to Amplify please visit https://docs.amplify.aws/start/q/integration/react/
-
-1. Install `Amplify CLI`. You only need to do this once. Skip this part if you already installed Amplify CLI in your computer. 
+When initializing your backend on Amplify by running `amplify init' (You can follow the steps here: https://docs.amplify.aws/start/getting-started/setup/q/integration/react/) make sure you select `No` when asked `Initialize the project with the above configuration?`
 ```bash
-npm install -g @aws-amplify/cli
+? Enter a name for the project reactamplified
+The following configuration will be applied:
+
+?Project information
+| Name:  reactamplified
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: react
+| Source Directory Path: src
+| Distribution Directory Path: build
+| Build Command: npm run-script build
+| Start Command: npm run-script start
+
+? Initialize the project with the above configuration? No
+
 ```
-2. Configure your amplify settings by typing
+Amplify will ask you to prompt your response manually. Once you get to the `Build Command` question type
 ```bash
-amplify configure
+npm run build
 ```
-`amplify configure` will ask you to sign into the AWS Console.
-
-3. Once you're signed in, Amplify CLI will ask you to create an IAM user.
+and for the `Start Command` type
 ```bash
-Specify the AWS Region
-? region:  # Your preferred region
-Follow the instructions at
-https://docs.amplify.aws/cli/start/install/#configure-the-amplify-cli
-
-to complete the user creation in the AWS console
-https://console.aws.amazon.com/iamv2/home#/users/create
+npm run dev
 ```
-Navigate to the IAM User (https://us-east-1.console.aws.amazon.com/iamv2/home?region=us-east-1#/users/create) creation page if it's not already open.
+This is very important because 
+```bash
+| Build Command: npm run-script build
+| Start Command: npm run-script start
+```
+will only work for `create-react-app`. Since we are using `Vite`, we need to modify the start and build command for Amplify to mirror our package.json. 
+```bash
+"scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+```
 
-Enter a User name and select Next. You can name the user anything but we'll call it "amplify-dev".
-![Alt text](src/assets/image/iam_1.png)
+For information on how to set up Amplify please visit https://docs.amplify.aws/start/q/integration/react/
+
