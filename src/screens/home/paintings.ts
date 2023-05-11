@@ -4,7 +4,7 @@ export const PAINTINGS = [
       artist: 'Efe Kurnaz',
       src: 'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat sed cras ornare arcu dui. Ac feugiat sed lectus vestibulum.',
+        'Immerse yourself in the captivating allure of "Hallway." With its impeccable composition, interplay of light and shadow, and a sense of timeless elegance, this painting transforms any space into a realm of beauty and intrigue. Discover the secrets that lie beyond its inviting doors and embrace its enchanting presence.',
       price: '$899.99',
       avgRating: 4.8,
       reviews: 445,
@@ -19,7 +19,7 @@ export const PAINTINGS = [
       artist: 'Pawel Czerwinski',
       src: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987',
       description:
-        'Lorem ipsum dolor sit amet, ubique patrioque at qui, modo hinc ne duo, ad consul animal volumus est. Ea quo etiam deleniti, amet singulis in sed. Omnesque lobortis vis ex. Wisi latine splendide vis ei, libris commodo no has.',
+        'Introducing "Fire and Ice" – A Dynamic Fusion of Elemental Forces. This captivating painting ignites the imagination with its intense juxtaposition of fiery hues and icy blues. The artist skillfully captures the tension between opposing elements, creating a visually striking masterpiece that commands attention and sparks contemplation. Surrender to the mesmerizing dance of "Fire and Ice."',
       price: '$699.99',
       avgRating: 4.1,
       reviews: 222,

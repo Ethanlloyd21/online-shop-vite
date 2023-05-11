@@ -1,6 +1,4 @@
-'use client';
-
-import * as React from 'react';
+import { useState } from 'react';
 import {
   Alert,
   Badge,
@@ -12,9 +10,7 @@ import {
   Heading,
   Image,
   Rating,
-  SelectField,
   StepperField,
-  SwitchField,
   Text,
   View,
 } from '@aws-amplify/ui-react';
@@ -22,24 +18,12 @@ import '@aws-amplify/ui-react/styles.css';
 import { PAINTINGS } from './paintings';
 
 export default function Test() {
-  const [currentPainting, setCurrentPainting] = React.useState(PAINTINGS[0]);
-  const [image, setImage] = React.useState(PAINTINGS[0].src);
-  const [frame, setFrame] = React.useState(true);
-  const [quantity, setQuantity] = React.useState(1);
-  const [size, setSize] = React.useState('');
-  const [error, setError] = React.useState(false);
+  const [currentPainting, setCurrentPainting] = useState(PAINTINGS[0]);
+  const [image, setImage] = useState(PAINTINGS[0].src);
+  const [quantity, setQuantity] = useState(1);
+ 
+  
 
-  const handleAddToCart = () => {
-    if (size === '') {
-      setError(true);
-      return;
-    }
-    alert(
-      `Added to cart!\n${quantity} ${size} "${currentPainting.title}" by ${
-        currentPainting.artist
-      } with ${frame ? 'a' : 'no'} frame`
-    );
-  };
 
   return (
     <View width="100%" maxWidth="50rem" padding={{ base: 0, large: '2rem' }}>
@@ -55,7 +39,7 @@ export default function Test() {
                 alt={`${currentPainting.title} abstract painting`}
                 width="100%"
                 height="21rem"
-                border={frame ? '3px solid black' : ''}
+                
               />
             </View>
             <Collection
@@ -135,42 +119,7 @@ export default function Test() {
               <Text fontSize="small" paddingBottom="1rem">
                 {currentPainting.description}
               </Text>
-              {currentPainting.readyForPickup ? (
-                <Text>
-                  <Text variation="success" as="span">
-                    Ready within 2 hours
-                  </Text>{' '}
-                  for pickup inside the store
-                </Text>
-              ) : null}
-              <SwitchField
-                label={frame ? 'Frame' : 'No frame'}
-                labelPosition="end"
-                isChecked={frame}
-                onChange={(e) => {
-                  setFrame(e.target.checked);
-                }}
-                isDisabled={!currentPainting.inStock}
-              />
-              <SelectField
-                label="Size"
-                labelHidden
-                variation="quiet"
-                placeholder="Select your size"
-                value={size}
-                onChange={(e) => {
-                  e.target.value !== '' && setError(false);
-                  setSize(e.target.value);
-                }}
-                hasError={error}
-                errorMessage="Please select a size."
-                isDisabled={!currentPainting.inStock}
-              >
-                <option value="Small" label='Small (12x16")' />
-                <option value="Medium" label='Medium (18x24")' />
-                <option value="Large" label='Large (24x36")' />
-                <option value="X-Large" label='X-Large (30x40")' disabled />
-              </SelectField>
+              
               {!currentPainting.inStock ? (
                 <Alert variation="error">Out of stock!</Alert>
               ) : null}
@@ -195,7 +144,7 @@ export default function Test() {
               </Flex>
               <Button
                 variation="primary"
-                onClick={handleAddToCart}
+                // onClick={handleAddToCart}
                 disabled={!currentPainting.inStock || !quantity}
               >
                 Add to Cart
