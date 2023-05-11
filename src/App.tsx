@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import Home from "./screens/home/Home";
+// import Home from "./screens/home/Home";
 import {
   defaultDarkModeOverride,
   ThemeProvider,
-  ColorMode,
+  // ColorMode,
 } from "@aws-amplify/ui-react";
 
 
@@ -15,13 +15,15 @@ import Test from "./screens/home/Test";
 function App() {
   // const [count, setCount] = useState(0)
 
-  const [colorMode, setColorMode] = useState<ColorMode>("dark");
+  // const [colorMode, setColorMode] = useState<ColorMode>("dark");
+  const colorMode = "dark";
   const theme = {
     name: "my-theme",
     overrides: [defaultDarkModeOverride],
   };
 
-  
+
+
   return (
     <>
       <ThemeProvider theme={theme} colorMode={colorMode}>
