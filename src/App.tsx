@@ -8,7 +8,9 @@ import {
   ColorMode,
 } from "@aws-amplify/ui-react";
 
+
 import "./App.css";
+import Test from "./screens/home/Test";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -22,7 +24,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme} colorMode={colorMode}>
-        <Home />
+        <Test />
       </ThemeProvider>
 
       {/* <div>
