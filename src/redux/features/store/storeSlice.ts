@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { InitialStateStore } from "../../../state/typesofCart";
+import { InitialStateStore } from "../../../state/typeofCarts";
 import axios from "axios";
-import { CartItemProps } from "../../../state/typesofCart";
+import { CartItemProps } from "../../../state/typeofCarts";
 
 //CloudFront API link of store inventory
 const CLOUDFRONT_API = "https://d2i03nztde2ppv.cloudfront.net/storeInventory.json";
