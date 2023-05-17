@@ -34,7 +34,7 @@ export const PAINTINGS = [
       artist: 'Kseniya Lapteva',
       src: 'https://images.unsplash.com/photo-1629196914375-f7e48f477b6d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1306',
       description:
-        'Lorem ipsum dolor sit amet, cu porro vivendum ius. Ad mei sint homero, cum an soluta epicurei. At pri minimum corrumpit. Minim percipitur eu mei, erant habemus deserunt qui et.',
+        '"Serenade of Sunlight" is a captivating painting that transports viewers into a world of warmth and radiance. The canvas sings with a harmonious blend of orange, pink, and yellow tones, evoking the beauty of a sun-kissed landscape. The vibrant colors dance together, creating an atmosphere of joy and tranquility. With every brushstroke, the painting captures the essence of a vibrant sunrise or a mesmerizing sunset, inviting viewers to bask in its luminous glow.',
       price: '$139.99',
       avgRating: 3.5,
       reviews: 142,
@@ -49,7 +49,7 @@ export const PAINTINGS = [
       artist: 'Maria Orlova',
       src: 'https://images.unsplash.com/photo-1549490349-8643362247b5?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987',
       description:
-        'Lorem ipsum dolor sit amet, facer nemore ei sea, mea facilis eloquentiam at. Et modus pertinax tincidunt est. Propriae argumentum necessitatibus eos ad.',
+        '"Melted Purple" is an intriguing painting that captures the essence of fluidity and transformation. The canvas comes alive with a mesmerizing blend of deep, rich purples, creating an atmosphere of mystery and contemplation. The colors appear to melt and merge, flowing and intertwining like molten lava. The composition exudes a sense of movement and change, inviting viewers to delve into the depths of their imagination and explore the hidden realms that lie beyond the boundaries of reality.',
       price: '$499.99',
       avgRating: 4.5,
       reviews: 301,
@@ -64,7 +64,7 @@ export const PAINTINGS = [
       artist: 'Bruno Thethe',
       src: 'https://images.unsplash.com/photo-1550275994-cdc89cd1948f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987',
       description:
-        'Lorem ipsum dolor sit amet, ea probo choro tollit pri, ad pro justo intellegam repudiandae, labores civibus eu quo. Cum latine instructior at, est no odio tibique epicuri.',
+        '"Experimental" is a bold and adventurous painting that defies convention. Bursting with vibrant colors and dynamic brushstrokes, this artwork embraces the spirit of experimentation. The rainbow hues cascade across the canvas, merging and blending in unexpected ways. Each color is a daring exploration, creating a symphony of visual delight. The composition invites viewers to embrace the joy of creativity and embrace the limitless possibilities that lie within the realm of artistic expression.',
       price: '$159.99',
       avgRating: 3.1,
       reviews: 56,
@@ -79,7 +79,7 @@ export const PAINTINGS = [
       artist: 'Felix Spiske',
       src: 'https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1310',
       description:
-        'Lorem ipsum dolor sit amet, sea tritani indoctum cu, facilis praesent at qui. Cu cetero veritus vel, et prima erant perfecto vix. Tollit delectus scaevola duo et, inermis sensibus voluptatum cu ius.',
+        '"Rainbow" is a painting that celebrates the enchanting beauty of the rainbow. The canvas comes alive with a symphony of colors, stretching across the sky in a graceful arc. Each hue is vibrant and distinct, creating a visual feast for the eyes. The painting radiates joy, hope, and a sense of wonder, reminding viewers of the awe-inspiring wonders of nature. It serves as a gentle reminder to embrace diversity, positivity, and the limitless possibilities that lie before us.',
       price: '$799.99',
       avgRating: 4.9,
       reviews: 550,
@@ -94,7 +94,7 @@ export const PAINTINGS = [
       artist: 'Radienta',
       src: 'https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=939',
       description:
-        'Lorem ipsum dolor sit amet, te labore lucilius pro, te his consul singulis, cu vel unum impedit complectitur. In usu erat dicta doctus, purto aeterno vis te. Facete deterruisset nec id. At omittam antiopam pri.',
+        '"Fearless Hue" is a painting that embodies courage and audacity. The canvas is adorned with bold, vibrant colors that radiate energy and intensity. The hues leap off the surface, demanding attention and leaving no room for hesitation. The painting exudes a sense of fearlessness, encouraging viewers to embrace their own unique colors and unleash their true selves. It serves as a reminder to embrace life with passion and to boldly express ones authentic voice.',
       price: '$249.99',
       avgRating: 3.3,
       reviews: 294,
@@ -109,7 +109,7 @@ export const PAINTINGS = [
       artist: 'Joel Filipe',
       src: 'https://images.unsplash.com/photo-1485163819542-13adeb5e0068?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987',
       description:
-        'Lorem ipsum dolor sit amet, cum cu meliore tacimates, vel no sale maiorum. His cu autem placerat. Homero urbanitas vituperata ad sit, ex mel convenire elaboraret.',
+        '"Liquid" is a mesmerizing painting that captures the essence of fluidity and transformation. The canvas seems to come alive with swirling, cascading forms that evoke the flowing nature of liquid. The colors blend and merge seamlessly, creating a captivating visual symphony. The painting invites viewers to surrender to the ebb and flow of life, reminding them that change is a constant and that embracing the fluidity of existence can lead to profound growth and beauty.',
       price: '$549.99',
       avgRating: 4.5,
       reviews: 440,

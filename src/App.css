@@ -1,8 +1,30 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  margin: 0;
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+.center-component {
+  
+  display: contents;
+  place-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   padding: 2rem;
-  text-align: center;
+  
+}
+
+.center-home {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  
 }
 
 .logo {
@@ -34,9 +56,49 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 2rem;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.logoText {
+  font-weight: 600;
+  font-size: 2rem;
+  padding-left: 1.2rem;
+  
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #0D1A26;
+  color: #fff;
+}
+
+.navbar__cart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__logo, .navbar__cart {
+  color: #fff;
+  text-decoration: none !important;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.navbar__logo img, .navbar__cart img {
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .navbar__logo img, .navbar__cart img {
+    height: 30px;
+  }
 }

@@ -4,7 +4,7 @@ import axios from "axios";
 import { CartItemProps } from "../../../state/typeofCarts";
 
 //CloudFront API link of store inventory
-const CLOUDFRONT_API = "https://d2i03nztde2ppv.cloudfront.net/storeInventory.json";
+const CLOUDFRONT_API = "https://d2i03nztde2ppv.cloudfront.net/paintings.json";
 
 const initialState = {
     storeInventory: [], 
@@ -16,8 +16,8 @@ export const getCartItems = createAsyncThunk("cart/getCartItems", async (_, thun
     try {
         const response = await axios.get<CartItemProps>(CLOUDFRONT_API);
         return response.data;
-    } catch (error: any) {
-        return thunkApi.rejectWithValue(error.message);
+    } catch (error: unknown) {
+        return thunkApi.rejectWithValue(error);
     }
     
 //   return fetch(CLOUDFRONT_API)

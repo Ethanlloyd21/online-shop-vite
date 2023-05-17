@@ -1,24 +1,33 @@
-export interface CartItemProps {
-    id: string;
-    category: string;
-    brand: string;
-    name: string;
-    price: number;
-    top_description: string;
-    image: string;
-    amount: number;
-  }
+
   export interface InitialStateInterface {
-    cartItems: any;
+    cartItems: CartItemProps[];
     amount: number;
     total: number;
     isLoading: boolean;
-    error: string | null
+    error: unknown;
   }
-  
+
+
+export interface CartItemProps {
+  title: string | undefined;
+  artist: string;
+  src: string;
+  description: string;
+  price: number;
+  avgRating: number;
+  reviews: number;
+  inStock: number;
+  readyForPickup: boolean;
+  bestSeller: boolean;
+  isNew: boolean;
+  limitedSupply: boolean;
+  id: string;
+  amount: number;
+}
+
   export interface InitialStateStore {
-    storeInventory: any;
+    storeInventory: unknown | any;
     isLoading: boolean;
-    error: any;
+    error: unknown;
   }
   

@@ -5,7 +5,7 @@ import axios from "axios";
 
 //CloudFront API link of store inventory
 const CLOUDFRONT_API =
-  "https://d2i03nztde2ppv.cloudfront.net/storeInventory.json";
+  "https://d2i03nztde2ppv.cloudfront.net/paintings.json";
 
 const initialState = {
   cartItems: [],
@@ -22,8 +22,8 @@ export const getCartItems = createAsyncThunk(
     try {
       const response = await axios.get<CartItemProps[]>(CLOUDFRONT_API);
       return response;
-    } catch (error: any) {
-      return thunkApi.rejectWithValue(error.message);
+    } catch (error: unknown) {
+      return thunkApi.rejectWithValue(error);
     }
 
     // return fetch(CLOUDFRONT_API)
@@ -52,15 +52,21 @@ const cartSlice = createSlice({
       const cartItem = state.cartItems.find(
         (item: CartItemProps) => item.id === payload.id
       );
-      cartItem.amount = cartItem.amount + 1;
-      state.amount = state.amount + 1;
+      if (cartItem) {
+        cartItem.amount = cartItem.amount + 1;
+        state.amount = state.amount + 1;
+      }
+      else console.log("CartItem is undefined!")
     },
     decrease: (state, { payload }) => {
       const cartItem = state.cartItems.find(
         (item: CartItemProps) => item.id === payload.id
       );
+      if (cartItem){
       cartItem.amount = cartItem.amount - 1;
       state.amount = state.amount - 1;
+      }
+      else console.log("CartItem is undefined!")
     },
     addtoCart: (state, action) => {
       const item = action.payload;
